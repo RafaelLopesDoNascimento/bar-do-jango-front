@@ -4,5 +4,10 @@
 
   <po-toolbar p-title="PO - Human Resources" ></po-toolbar>
 
-<po-page-default p-title="Porções"></po-page-default>
+<po-page-default p-title="Porções">
+  <div *ngFor="let image of callImagens()">
+    <img [src]="image.src" [alt]="image.alt">
+  </div>
+  
+</po-page-default>
 </div>

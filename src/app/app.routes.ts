@@ -7,7 +7,7 @@ export const routes: Routes = [
   {path: 'refrigerantes', loadChildren: ()=> import('./refrigerantes/refrigerantes.routes').then(m => m.REFRIGERANTE_ROUTES)},
   {path: 'bebidas', loadChildren: ()=> import('./bebidas/bebidas.routes').then(m => m.BEBIDAS_ROUTES)},
   {path: 'clients', loadChildren: ()=> import('./clients/clients.routes').then(m => m.CLIENTS_ROUTES)},
-  {path: 'caipiras', loadChildren: ()=> import('./clients/clients.routes').then(m => m.CLIENTS_ROUTES)},
+  {path: 'caipiras', loadChildren: ()=> import('./caipiras/caipiras.routes').then(m => m.CAIPIRAS_ROUTES)},
 
 
 ];
