@@ -1,24 +1,21 @@
 import { Component } from '@angular/core';
-import {
-  PoMenuItem,
-  PoMenuModule,
-  PoPageModule,
-  PoToolbarModule,
-} from '@po-ui/ng-components';
+import { PoImageModule, PoMenuItem, PoMenuModule, PoPageModule, PoToolbarModule } from '@po-ui/ng-components';
 import { ServiceRestService } from '../../services/service-rest.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-menu',
-  imports: [PoMenuModule, PoPageModule, PoToolbarModule],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css',
+  selector: 'app-segundo-menu',
+  imports: [PoMenuModule, PoPageModule, PoToolbarModule, PoImageModule],
+  templateUrl: './segundo-menu.component.html',
+  styleUrl: './segundo-menu.component.css'
 })
-export class MenuComponent {
-  serviceClients: ServiceRestService;
+export class SegundoMenuComponent {
+serviceClients: ServiceRestService;
+  collapsedAnswer: boolean;
 
   constructor(private router: Router) {
     this.serviceClients = '';
+    this.collapsedAnswer = true;
   }
 
   menus: Array<PoMenuItem> = [
@@ -70,7 +67,5 @@ export class MenuComponent {
       shortLabel: 'Clientes',
       action: () => this.router.navigate(['clients']),
     },
-    
   ];
-  
 }

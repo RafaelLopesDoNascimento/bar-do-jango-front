@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import {
+  PoImageModule,
   PoMenuItem,
   PoMenuModule,
   PoPageModule,
   PoToolbarModule,
 } from '@po-ui/ng-components';
-
+import { ServiceRestService } from '../../services/service-rest.service';
 import { Router } from '@angular/router';
-import { ServiceRestService } from '../services/service-rest.service';
 
 @Component({
-  selector: 'app-bebidas',
-  imports: [PoToolbarModule, PoPageModule, PoMenuModule],
-  templateUrl: './bebidas.component.html',
-  styleUrl: './bebidas.component.css',
+  selector: 'app-menuBar',
+  imports: [PoMenuModule, PoPageModule, PoToolbarModule, PoImageModule],
+  templateUrl: './menu.component.html',
+  styleUrl: './menu.component.css',
 })
-export class BebidasComponent {
+export class MenuBarComponent {
   serviceClients: ServiceRestService;
   collapsedAnswer: boolean;
 
@@ -23,6 +23,7 @@ export class BebidasComponent {
     this.serviceClients = '';
     this.collapsedAnswer = true;
   }
+
   menus: Array<PoMenuItem> = [
     {
       label: 'Home',

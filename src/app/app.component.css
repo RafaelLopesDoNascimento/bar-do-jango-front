@@ -1,0 +1,11 @@
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.logo-bar-div {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
