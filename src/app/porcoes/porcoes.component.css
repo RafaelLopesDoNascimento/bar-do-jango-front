@@ -1,0 +1,28 @@
+.porcoes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 60px;
+  padding-bottom: 100px;
+  
+}
+
+.porcoes-container {
+  background-color: black;
+  display: flex;
+  row-gap: 50px;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 14px;
+  padding: 15px;
+}
+
+.paragraphs {
+  text-align: center;
+}
+
+::ng-deep po-page-default {
+  background-color: black !important;
+}

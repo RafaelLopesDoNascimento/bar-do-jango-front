@@ -15,11 +15,9 @@ import { ServiceRestService } from '../services/service-rest.service';
   styleUrl: './caipiras.component.css',
 })
 export class CaipirasComponent {
-  serviceClients: ServiceRestService;
   collapsedAnswer: boolean;
 
-  constructor(private router: Router) {
-    this.serviceClients = '';
+  constructor(private router: Router, private api: ServiceRestService) {
     this.collapsedAnswer = true;
   }
   menus: Array<PoMenuItem> = [

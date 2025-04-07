@@ -16,11 +16,9 @@ import { Router } from '@angular/router';
   styleUrl: './menu.component.css',
 })
 export class MenuBarComponent {
-  serviceClients: ServiceRestService;
   collapsedAnswer: boolean;
 
-  constructor(private router: Router) {
-    this.serviceClients = '';
+  constructor(private router: Router, private api: ServiceRestService) {
     this.collapsedAnswer = true;
   }
 

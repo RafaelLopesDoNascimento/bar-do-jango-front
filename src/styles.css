@@ -10,5 +10,16 @@ img {
 }
 
 po-menu {
+  --background-color: black;
+  
+}
+
+::ng-deep po-page-default {
   background-color: black !important;
 }
+
+
+.div-main {
+  --background-color: black !important; 
+}
+

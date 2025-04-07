@@ -16,61 +16,8 @@ import { ServiceRestService } from '../services/service-rest.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  serviceClients: ServiceRestService;
-  collapsedAnswer: boolean;
 
-  constructor(private router: Router) {
-    this.serviceClients = '';
-    this.collapsedAnswer = true;
+  constructor(private router: Router, private api: ServiceRestService) {
   }
-  menus: Array<PoMenuItem> = [
-    {
-      label: 'Home',
-      action: () => this.router.navigate(['home']),
-      icon: 'an-fill an-house',
-      shortLabel: 'Home',
-    },
-    {
-      label: 'Porções',
-      action: () => this.router.navigate(['porcoes']),
-      icon: 'an-fill an-bowl-food',
-      shortLabel: 'Porções',
-    },
-    {
-      label: 'Bebidas',
-      icon: 'an-fill an-beer-bottle',
-      shortLabel: 'Bebidas',
-      subItems: [
-        {
-          label: 'Cervejas',
-          action: () => this.router.navigate(['bebidas']),
-          icon: 'an-fill an-beer-stein',
-          shortLabel: 'Cervejas',
-        },
-        {
-          label: 'Refrigerantes',
-          action: () => this.router.navigate(['refrigerantes']),
-          icon: 'an-fill an-pint-glass',
-          shortLabel: 'Refrigerantes',
-        },
-        {
-          label: 'Caipiras',
-          action: () => this.router.navigate(['caipiras']),
-          icon: 'an-fill an-wine',
-          shortLabel: 'Caipiras',
-        },
-      ],
-    },
-    {
-      label: 'Pagar',
-      icon: 'an-fill an-money',
-      shortLabel: 'Pagar',
-    },
-    {
-      label: 'Clientes',
-      icon: 'an-fill an-users-three',
-      shortLabel: 'Clientes',
-      action: () => this.router.navigate(['clients']),
-    },
-  ];
+ 
 }

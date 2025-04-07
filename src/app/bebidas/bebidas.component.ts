@@ -8,20 +8,28 @@ import {
 
 import { Router } from '@angular/router';
 import { ServiceRestService } from '../services/service-rest.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-bebidas',
-  imports: [PoToolbarModule, PoPageModule, PoMenuModule],
+  imports: [PoToolbarModule, PoPageModule, PoMenuModule, CommonModule],
   templateUrl: './bebidas.component.html',
   styleUrl: './bebidas.component.css',
 })
 export class BebidasComponent {
-  serviceClients: ServiceRestService;
+  imagens: Array<any>;
   collapsedAnswer: boolean;
 
-  constructor(private router: Router) {
-    this.serviceClients = '';
+  constructor(private router: Router, private api: ServiceRestService) {
     this.collapsedAnswer = true;
+    this.imagens = [
+      { src: '/cervejas-png/original.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+      { src: '/cervejas-png/skol.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+      { src: '/cervejas-png/heinekein.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+      { src: '/cervejas-png/brahma.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+      { src: '/cervejas-png/antartica.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+      { src: '/cervejas-png/amstel.jpeg', alt: 'Fritas Imagem', value: 35.0,  namePorcao: 'Batata Frita', weight: 700},
+    ];
   }
   menus: Array<PoMenuItem> = [
     {
@@ -73,4 +81,8 @@ export class BebidasComponent {
       action: () => this.router.navigate(['clients']),
     },
   ];
+
+  callImagens() {
+    return this.imagens;
+  }
 }
